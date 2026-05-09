@@ -1,0 +1,122 @@
+.item-card{
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.item-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-image-container{
+    position: relative;
+    background-color: #f6f7fb;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.item-image{
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover .item-image{
+    transform: scale(1.08);
+}
+
+.item-category{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #389fff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.item-category.beauty { background: #ffd166; }
+.item-category.fragrances { background: #06d6a0; }
+.item-category.furniture { background: #118ab2; }
+.item-category.groceries { background: #330f97; }
+
+.item-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item-content h2{
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.item-description{
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.item-rating{
+    margin-top: 14px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.item-footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+}
+
+.stock{
+    margin-top: 4px;
+    color: #1b9c3f;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.low-stock{
+    color: #e63946;
+}
+
+.item-footer button{
+    border: none;
+    background-color: #389fff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.item-footer button:hover{
+    background-color: #167fe0;
+    transform: scale(1.05);
+}

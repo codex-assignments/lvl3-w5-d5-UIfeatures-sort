@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #e0f2fe 0%, transparent 30%),
+        #f5f7fb;
+    color: #1f2937;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#search-input{
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    padding: 20px 24px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    transition: all 0.25s ease;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+#search-input::placeholder{
+    color: #94a3b8;
+}
+
+#search-input:focus{
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 35px rgba(59, 130, 246, 0.18),
+        0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.categories label{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+    transition: all 0.25s ease;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.categories label:hover{
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #60a5fa;
+}
+
+.categories input{
+    accent-color: #3b82f6;
+    transform: scale(1.1);
+}
+
+.categories label:has(input:checked){
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+    color: white;
+    border-color: transparent;
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+.container button{
+    margin-top: 28px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    transition: all 0.25s ease;
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+.container button:hover{
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 16px 30px rgba(37, 99, 235, 0.35);
+}
+
+.container button:active{
+    transform: scale(0.98);
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.items p{
+    font-size: 1rem;
+}
+
+@media (max-width: 768px){
+
+    .container{
+        padding: 25px 18px;
+    }
+
+    #search-input{
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    .categories{
+        gap: 10px;
+    }
+
+    .categories label{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .items{
+        grid-template-columns: 1fr;
+    }
+}
+
+.title-section{
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-section h1{
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa,
+        #38bdf8
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+.title-section p{
+    margin-top: 14px;
+    max-width: 650px;
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* CART BUTTON CSS ADDED */
+#cart-button{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* DROPDOWN MENU CSS ADDED */
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  margin: 10px 0;
+}
+
+select:focus {
+  border-color: #666;
+}
+
+/* HOVER STYLING FOR LABEL CSS ADDED */
+.label-radio.beauty:hover{
+    background-color: #ffd166;
+    color: white;
+}
+
+.label-radio.fragrances:hover{
+    background-color: #06d6a0;
+    color: white;
+}
+
+.label-radio.furniture:hover{
+    background-color: #118ab2;
+    color: white;
+}
+
+.label-radio.groceries:hover{
+    background-color: #330f97;
+    color: white;
+}
