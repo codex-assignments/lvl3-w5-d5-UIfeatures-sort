@@ -13,6 +13,37 @@ body{
     color: #1f2937;
 }
 
+nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 30px; 
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -206,6 +237,15 @@ body{
 }
 
 /* DROPDOWN MENU CSS ADDED */
+
+input {
+    color: black;
+}
+
+select {
+    color: black;
+}
+
 select {
   padding: 8px 12px;
   border-radius: 6px;
@@ -240,4 +280,46 @@ select:focus {
 .label-radio.groceries:hover{
     background-color: #330f97;
     color: white;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  color: #888;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #333;
+  color: #eee;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
