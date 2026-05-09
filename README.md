@@ -13,6 +13,9 @@ how to test it
 
 
 
+The assignment app uses a deck of cards API to pull a randomized shuffled deck, draw a hand of 12 cards, and uses buttons and a dropdown to filter and sort those cards. 
+
+To run the app, use npm run dev and open in localhost.
 
 
 
